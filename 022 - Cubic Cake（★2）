@@ -1,0 +1,15 @@
+using System;
+class program{
+	static void Main(){
+	  var ABC = Array.ConvertAll(Console.ReadLine().Split(' '),long.Parse);
+	  Array.Sort(ABC);
+	  long max = gcd(ABC[2],ABC[1]);
+	  max = gcd(ABC[0],max);
+		Console.WriteLine("{0}",(ABC[0]+ABC[1]+ABC[2])/max-3);
+	}
+	
+	static long gcd(long a,long b){
+	  if(b==0) return a;
+	  return gcd(b, a%b);
+	}
+}
