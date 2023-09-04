@@ -1,0 +1,21 @@
+using System;
+
+class program{
+  static int[] Rd() => Array.ConvertAll(Console.ReadLine().Split(' '),int.Parse);
+	static void Main(){
+	  var nm = Rd();
+	  int n = nm[0];
+	  int m = nm[1];
+	  var cnt = new int[n+1];
+	  for(int i=0;i<m;i++){
+	    nm = Rd();
+	    int j = nm[0]<nm[1] ? nm[1] : nm[0];
+	    cnt[j]++;
+	  }
+	  int c=0;
+	  foreach(int i in cnt){
+	    if(i==1)c++;
+	  }
+	  Console.WriteLine(c);
+	}
+}
