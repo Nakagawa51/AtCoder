@@ -1,0 +1,13 @@
+using System;
+using System.Collections.Generic;
+
+class program{
+	static void Main(){
+	  int n = int.Parse(Console.ReadLine());
+	  var list = new HashSet<string>();
+	  for(int i=1;i<=n;i++){
+	    string strName = Console.ReadLine();
+	    if(list.Add(strName)) Console.WriteLine(i);
+	  }
+	}
+}
