@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+
+class program{
+	static void Main(){
+	  int n = int.Parse(Console.ReadLine());
+	  var list = new List<int>();
+	  for(int i=0;i<n;i++){
+	    var str = Array.ConvertAll(Console.ReadLine().Split(' '),int.Parse);
+	    switch(str[0]){
+	      case 1:
+	        list.Insert(0,str[1]);
+	        break;
+        case 2:
+          list.Add(str[1]);
+	        break;
+	      case 3:
+	        Console.WriteLine(list[str[1]-1]);
+	        break;
+	    }
+	  }
+	}
+}
