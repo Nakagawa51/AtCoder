@@ -1,0 +1,14 @@
+using System;
+
+class program{
+	static void Main(){
+	  var hw = Array.ConvertAll(Console.ReadLine().Split(' '),int.Parse);
+	  int ans =0;
+	  if(hw[0]==1 || hw[1]==1){
+	    ans = hw[0]*hw[1];
+	  }else{
+	    ans = ((hw[0]+1)/2)*((hw[1]+1)/2);
+	  }
+	  Console.WriteLine(ans);
+	}
+}
