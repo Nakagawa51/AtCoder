@@ -1,0 +1,15 @@
+using System;
+class program{
+	static void Main(){
+		var ab = Console.ReadLine().Split(' ');
+		int a = int.Parse(ab[0]);
+		int b = int.Parse(ab[1]);
+		string s = "";
+		if((a*b)%2==0){
+			s = "Even";
+		}else{
+			s = "Odd";
+		}
+		Console.WriteLine(s);
+	}
+}
