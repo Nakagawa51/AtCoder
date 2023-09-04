@@ -1,0 +1,17 @@
+using System;
+class program{
+	static void Main(){
+		var nx = Console.ReadLine().Split(' ');
+		int n = int.Parse(nx[0]);
+		int X = int.Parse(nx[1]);
+		for(int i=0;i<=n;i++){
+			for(int j=0;j+i<=n;j++){
+				if(i*1000 + j*5000 + (n-i-j)*10000==X){
+					Console.WriteLine("{0} {1} {2}",n-i-j,j,i);
+					return;
+				}
+			}
+		}
+		Console.WriteLine("-1 -1 -1");
+	}
+}
