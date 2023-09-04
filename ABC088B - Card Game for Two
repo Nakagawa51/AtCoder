@@ -1,0 +1,22 @@
+using System;
+class program{
+	static void Main(){
+		int n = int.Parse(Console.ReadLine());
+		var cards = Console.ReadLine().Split(' ');
+		var c = new int[n];
+		for(int i=0;i<n;i++){
+			c[i]=int.Parse(cards[i]);
+		}
+		Array.Sort(c);
+		Array.Reverse(c);
+		int cnt=0;
+		for(int i=0;i<n;i++){
+			if(i%2==0){
+				cnt+=c[i];
+			}else{
+				cnt-=c[i];
+			}
+		}
+		Console.WriteLine(cnt);
+	}
+}
