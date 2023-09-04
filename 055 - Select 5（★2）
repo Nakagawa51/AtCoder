@@ -1,0 +1,29 @@
+using System;
+
+class program{
+	static void Main(){
+	  var npq = Console.ReadLine().Split(' ');
+	  int n = int.Parse(npq[0]);
+	  long p = long.Parse(npq[1]);
+	  long q = long.Parse(npq[2]);
+	  var num = Array.ConvertAll(Console.ReadLine().Split(' '),long.Parse);
+    int cnt = 0;
+	  for(int i=0;i<n;i++){
+	    var ans1 = num[i]%p;
+	    for(int j=i+1;j<n;j++){
+	      var ans2 = ans1*num[j]%p;
+	      for(int k=j+1;k<n;k++){
+	        var ans3 = ans2*num[k]%p;
+	        for(int l=k+1;l<n;l++){
+	          var ans4 = ans3*num[l]%p;
+	          for(int m=l+1;m<n;m++){
+	            var ans5 = ans4*num[m]%p;
+	            if(ans5==q)cnt++;
+	          }
+	        }
+	      }
+	    }
+	  }
+	  Console.WriteLine(cnt);
+	}
+}
