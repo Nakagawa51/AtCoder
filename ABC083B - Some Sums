@@ -1,0 +1,21 @@
+using System;
+class program{
+	static void Main(){
+		var nab = Console.ReadLine().Split(' ');
+		int n = int.Parse(nab[0]);
+		int a = int.Parse(nab[1]);
+		int b = int.Parse(nab[2]);
+		int cnt=0;
+		for(int i=1;i<=n;i++){
+			string s=i.ToString();
+			int each_cnt=0;
+			for(int j=0;j<s.Length;j++){
+				each_cnt+=int.Parse(s.Substring(j,1));
+			}
+			if(each_cnt>=a && b>=each_cnt){
+				cnt+=i;
+			}
+		}
+		Console.WriteLine(cnt);
+	}
+}
