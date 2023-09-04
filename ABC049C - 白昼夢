@@ -1,0 +1,16 @@
+using System;
+class program{
+	static void Main(){
+		var s = Console.ReadLine();
+		//dream dreamer erase eraser 
+		s = s.Replace("eraser","");
+		s = s.Replace("erase","");
+		s = s.Replace("dreamer","");
+		s = s.Replace("dream","");
+		if(s==""){
+			Console.WriteLine("YES");
+		}else{
+			Console.WriteLine("NO");
+		}
+	}
+}
